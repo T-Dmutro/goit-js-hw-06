@@ -7,11 +7,11 @@ const buttonIncrement = document.querySelector('button[data-action="increment"]'
 // console.log(buttonDecrement)
 
 // варіант 1
-function decrement (){value-=1, valueEl.innerHTML = value;};
-function increment (){value+=1, valueEl.innerHTML = value;};
+function decrement (){value-=1; valueEl.innerHTML = value;};
+function increment (){value+=1; valueEl.innerHTML = value;};
 console.log(value);
-buttonDecrement.addEventListener("click", decrement());
-buttonIncrement.addEventListener("click", increment() );
+buttonDecrement.addEventListener("click", decrement);
+buttonIncrement.addEventListener("click", increment );
 console.log(value);
 
 
