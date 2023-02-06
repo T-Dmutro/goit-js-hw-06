@@ -12,18 +12,29 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-const imagesItem= ({url, alt})=>{
-return
-`<li> <img src= ${url}, alt = ${alt}> </li>`
-}
-// console.log(imagesItem)
-const listImage = document.querySelector('.gallery');
+// const imagesItem= ({url, alt})=>{
+// return
+// `<li> <img src= ${url}, alt = ${alt}> </li>`
+// }
+// // console.log(imagesItem)
+// const listImage = document.querySelector('.gallery');
 
-// console.log(listImage)
-const listMeker = images.map((ielement)=>{ielement})
-console.log(listMeker)
-listImage.insertAdjacentHTML('beforebegin', listMeker)
+// // console.log(listImage)
+// const listMeker = images.map((ielement)=>{ielement})
+// console.log(listMeker)
+// listImage.insertAdjacentHTML('beforebegin', listMeker)
 
 
 {/* <li><img src='https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       alt='White and Black Long Fur Cat'>  </li> */}
+
+
+      const markTransactionMarkup = ({url, alt}) =>{
+        return `<li> <img src= ${url}, alt = ${alt}> </li>`
+      }
+      const imageEl= document.querySelector(".gallery")
+      console.log(imageEl)
+      // console.log(markTransactionMarkup(images[0]))
+      const makeImagesRow = images.map(markTransactionMarkup).join("")
+      // console.log(makeImagesRow)
+      imageEl.insertAdjacentHTML("beforeend", makeImagesRow)
