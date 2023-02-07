@@ -7,14 +7,22 @@ const  onData= document.querySelector('#validation-input').getAttribute('data-le
 //для чекбокса
 inputItem.addEventListener('change', onInputChange );
 function onInputChange(){
-    const inputLength = [];
-    inputLength.push(event.currentTarget.value)
-    console.log(inputLength[0].length)
-    if (inputLength[0].length === Number(onData)){
-        inputItem.classList.add('valid')
-    } else{ inputItem.classList.add('invalid')}
-    
+    // const inputLength = [];
+    // inputLength.push(event.currentTarget.value)
+    // console.log(inputLength[0].length)
+    // console.log(event.currentTarget.value.length)
+ 
+    if (event.currentTarget.value.length=== Number(onData)){
+     inputItem.classList.add('valid');
+     inputItem.classList.remove('invalid')
+     
+    }  else{ inputItem.classList.add('invalid');
+    inputItem.classList.remove('valid')
 }
+   
+}
+
+
 
 
 // inputItem.addEventListener( 'focus', onInputFocus);
