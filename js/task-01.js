@@ -1,17 +1,14 @@
 const liItem = document.querySelectorAll("li.item");
 console.log("Number of categories:" ,liItem.length);
 
-const LiCategory =  document.querySelectorAll("h2");
-const ulCategory =document.querySelectorAll("ul")
-console.log('Category:', LiCategory[0].textContent)
-
-console.log('Category:', LiCategory[1].textContent)
-console.log('Category:', LiCategory[2].textContent)
 
 
 
 
-
+liItem.forEach((category, index)=>{
+   console.log(`Category: ${category.firstElementChild.textContent} 
+   Elements: ${category.lastElementChild.childElementCount}`  );}
+);
 
 
 
