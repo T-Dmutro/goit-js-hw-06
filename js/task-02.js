@@ -21,7 +21,7 @@ const listFull = ingredients.map(option =>{
 });
 console.log(list)
 
-
+list.append(...listFull)
 
 
 // for (const ingredient of ingredients){
@@ -33,4 +33,3 @@ console.log(list)
 //   listFull.push(el)
 //   console.log(listFull)
 // };
-list.append(...listFull)
